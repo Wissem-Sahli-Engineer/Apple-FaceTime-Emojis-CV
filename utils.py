@@ -4,6 +4,8 @@ import cv2
 import numpy as np
 # pyrefly: ignore [missing-import]
 from PIL import Image, ImageDraw, ImageFont
+# pyrefly: ignore [missing-import]
+from pilmoji import Pilmoji
 
 
 # init " pTime = time.time() " before the While loop
@@ -26,7 +28,11 @@ def get_fps(cap, pTime,type='default'):
 try:
     EMOJI_FONT = ImageFont.truetype("/System/Library/Fonts/Apple Color Emoji.ttc", 40)
 except IOError:
-    EMOJI_FONT = ImageFont.load_default()
+    try:
+        EMOJI_FONT = ImageFont.truetype("NotoColorEmoji.ttf", 40)
+    except IOError:
+        print("Warning: Neither Apple Color Emoji nor NotoColorEmoji.ttf were found. Falling back to default.")
+        EMOJI_FONT = ImageFont.load_default()
 
 class EffectManager:
     def __init__(self):

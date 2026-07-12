@@ -59,39 +59,39 @@ while True:
 
         # 1. Heart (2 hands)
         if detect_heart(lmList):
-            effect_mgr.trigger("[ ❤️ HEARTS ]", cx, cy)
+            effect_mgr.trigger("❤️", cx, cy)
             
         else:
             # 2. Rock On
             rocks = detect_rock_on(lmList)
             if rocks == 1 or rocks ==2:
-                effect_mgr.trigger("[ 🪩 LASERS ]", cx, cy)
+                effect_mgr.trigger("🪩", cx, cy)
                 
             # 3. Peace
             peaces = detect_peace(lmList)
             if peaces == 2:
-                effect_mgr.trigger("[ 🎉 CONFETTI ]", cx, cy)
+                effect_mgr.trigger("🎉", cx, cy)
             elif peaces == 1:
-                effect_mgr.trigger("[ 🎈 BALLOONS ]", cx, cy)
+                effect_mgr.trigger("🎈", cx, cy)
                 
             # 4. Thumbs Up
             thumbs_ups = detect_thumbs_up(lmList)
             if thumbs_ups == 2:
-                effect_mgr.trigger("[ 🎆 FIREWORKS ]", cx, cy)
+                effect_mgr.trigger("🎆", cx, cy)
             elif thumbs_ups == 1:
-                effect_mgr.trigger("[ 👍 THUMBS UP ]", cx, cy)
+                effect_mgr.trigger("👍", cx, cy)
                 
             # 5. Thumbs Down
             thumbs_downs = detect_thumbs_down(lmList)
             if thumbs_downs == 2:
-                effect_mgr.trigger("[ 🌧️ RAINSTORM ]", cx, cy)
+                effect_mgr.trigger("🌧️", cx, cy)
             elif thumbs_downs == 1:
-                effect_mgr.trigger("[ 👎 THUMBS DOWN ]", cx, cy)
+                effect_mgr.trigger("👎", cx, cy)
             
             # 6. middle finger
             middle_finger = detect_middle(lmList)
             if middle_finger in [1,2]:
-                effect_mgr.trigger("[ 🖕 MIDDLE FINGER ]", cx, cy)
+                effect_mgr.trigger("🖕", cx, cy)
 
         # Draw active effects
         effect_mgr.draw(img)
