@@ -151,3 +151,11 @@ def detect_heart(hands):
         if count == 2 :
             return True
     return False
+
+def detect_middle(hands):
+    count = 0
+    for hand in hands:
+        f = get_fingers_up(hand)
+        if not f[1] and f[2] and not f[3] and not f[4]:
+            count += 1
+    return count

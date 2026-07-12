@@ -5,7 +5,7 @@ import os , time
 from Hand_Tracking_Model.utils import handDetector
 
 from utils import EffectManager , get_fps, detect_thumbs_up , detect_thumbs_down
-from utils import detect_heart ,  detect_rock_on , detect_peace
+from utils import detect_heart ,  detect_rock_on , detect_peace , detect_middle
 
 ##################
 """ Arguments """
@@ -87,6 +87,12 @@ while True:
                 effect_mgr.trigger("[ 🌧️ RAINSTORM ]", cx, cy)
             elif thumbs_downs == 1:
                 effect_mgr.trigger("[ 👎 THUMBS DOWN ]", cx, cy)
+            
+            # 6. middle finger
+            middle_finger = detect_middle(lmList)
+            if middle_finger in [1,2]:
+                effect_mgr.trigger("[ 🖕 MIDDLE FINGER ]", cx, cy)
+
         # Draw active effects
         effect_mgr.draw(img)
 
