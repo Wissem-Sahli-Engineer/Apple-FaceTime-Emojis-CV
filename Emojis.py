@@ -3,11 +3,9 @@ import cv2
 import mediapipe as mp 
 import os , time 
 from Hand_Tracking_Model.utils import handDetector
-from utils import get_fps
-import math
 
-from utils import EffectManager , detect_thumbs_up , detect_thumbs_down , detect_peace
-from utils import detect_heart ,  detect_rock_on
+from utils import EffectManager , get_fps, detect_thumbs_up , detect_thumbs_down
+from utils import detect_heart ,  detect_rock_on , detect_peace
 
 ##################
 """ Arguments """
@@ -17,18 +15,6 @@ Wcam, Hcam = 1280 , 720
 cap = cv2.VideoCapture(0)
 cap.set(3,Wcam)
 cap.set(4,Hcam)
-
-img_path = os.listdir("images") ; img_path.sort()
-overlayList = []
-
-for path in img_path:
-    image = cv2.resize( cv2.imread(f'images/{path}'),
-                        (200,300),
-                        interpolation=cv2.INTER_AREA
-    )
-
-    overlayList.append(image)
-
 
 detector = handDetector(model_path = "Hand_Tracking_Model/hand_landmarker.task",
                         num_hands = 2,
