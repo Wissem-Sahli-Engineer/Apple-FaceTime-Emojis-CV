@@ -20,7 +20,7 @@ This project combines real-time hand tracking with gesture recognition to create
 ## 🏗️ Architecture & Flow Scheme
 
 ```mermaid
-flowchart LR
+graph TD
     A[Start Webcam] --> B[Read Frame]
     B --> C[Flip & Convert to RGB]
     C --> D[Send Frame to MediaPipe HandLandmarker]
