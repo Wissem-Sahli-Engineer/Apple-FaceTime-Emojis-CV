@@ -64,7 +64,7 @@ while True:
         else:
             # 2. Rock On
             rocks = detect_rock_on(lmList)
-            if rocks == 2:
+            if rocks == 1 or rocks ==2:
                 effect_mgr.trigger("[ 🪩 LASERS ]", cx, cy)
                 
             # 3. Peace
@@ -72,21 +72,21 @@ while True:
             if peaces == 2:
                 effect_mgr.trigger("[ 🎉 CONFETTI ]", cx, cy)
             elif peaces == 1:
-                effect_mgr.trigger("[ 🎈 BALLOONS ]", 50, cy)
+                effect_mgr.trigger("[ 🎈 BALLOONS ]", cx, cy)
                 
             # 4. Thumbs Up
             thumbs_ups = detect_thumbs_up(lmList)
             if thumbs_ups == 2:
                 effect_mgr.trigger("[ 🎆 FIREWORKS ]", cx, cy)
             elif thumbs_ups == 1:
-                effect_mgr.trigger("[ 👍 THUMBS UP ]", 50, cy)
+                effect_mgr.trigger("[ 👍 THUMBS UP ]", cx, cy)
                 
             # 5. Thumbs Down
             thumbs_downs = detect_thumbs_down(lmList)
             if thumbs_downs == 2:
                 effect_mgr.trigger("[ 🌧️ RAINSTORM ]", cx, cy)
             elif thumbs_downs == 1:
-                effect_mgr.trigger("[ 👎 THUMBS DOWN ]", 50, cy)
+                effect_mgr.trigger("[ 👎 THUMBS DOWN ]", cx, cy)
         # Draw active effects
         effect_mgr.draw(img)
 
