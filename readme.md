@@ -42,40 +42,18 @@ graph TD
 
 ---
 
-## 📂 Directory Structure
+## 📂 File Directory Structure and Details
 
 ```text
 Apple FaceTime Emojis CV/
-├── Emojis.py
-├── readme.md
-├── requirements.txt
-├── utils.py
-└── Hand_Tracking_Model/
-    ├── hand_landmarker.task
-    └── utils.py
+├── Emojis.py                    # Main application execution script
+├── readme.md                    # Project documentation and usage guide.
+├── requirements.txt             # Python package dependencies
+├── utils.py                     # Contains the effects and gesture recognition helpers.
+└── Hand_Tracking_Model/         # Core MediaPipe Landmarker module
+    ├── hand_landmarker.task     # Pre-trained MediaPipe Hand Landmarker task bundle
+    └── utils.py                 # Wrapper class (handDetector) around MediaPipe API
 ```
-
----
-
-## 📄 File Details
-
-- [Emojis.py](file:///Users/wess/Desktop%20computer%20vision/Apple%20FaceTime%20Emojis%20CV/Emojis.py)  
-  The main application entry point. It opens the webcam, runs the detection loop, handles the live frame display, and calls the gesture/effect logic.
-
-- [utils.py](file:///Users/wess/Desktop%20computer%20vision/Apple%20FaceTime%20Emojis%20CV/utils.py)  
-  Contains the effect engine and gesture recognition helpers. It manages active overlays, animation timing, and the coordinate-based logic for identifying hand poses.
-
-- [Hand_Tracking_Model/utils.py](file:///Users/wess/Desktop%20computer%20vision/Apple%20FaceTime%20Emojis%20CV/Hand_Tracking_Model/utils.py)  
-  Wraps the MediaPipe hand landmark detector and converts raw landmark results into usable hand coordinate lists.
-
-- [Hand_Tracking_Model/hand_landmarker.task](file:///Users/wess/Desktop%20computer%20vision/Apple%20FaceTime%20Emojis%20CV/Hand_Tracking_Model/hand_landmarker.task)  
-  The trained MediaPipe hand landmark model used to detect hand joints and finger positions from webcam frames.
-
-- [requirements.txt](file:///Users/wess/Desktop%20computer%20vision/Apple%20FaceTime%20Emojis%20CV/requirements.txt)  
-  Lists the required Python packages for running the project.
-
-- [readme.md](file:///Users/wess/Desktop%20computer%20vision/Apple%20FaceTime%20Emojis%20CV/readme.md)  
-  Project documentation and usage guide.
 
 ---
 
