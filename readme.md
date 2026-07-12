@@ -17,6 +17,23 @@ This project combines real-time hand tracking with gesture recognition to create
 
 ---
 
+## 🎭 FaceTime Reaction Gestures Matrix
+
+This system tracks both single-hand and two-hand combinations to trigger Apple FaceTime-style animations. 
+
+| Hand Gesture | Emoji / Visual Effect | Hands Required |
+| :--- | :--- | :--- |
+| **Single Thumb Up** | 👍 Thumbs Up Bubble | 1 Hand |
+| **Double Thumb Up** | 🎆 Fireworks | 2 Hands |
+| **Single Thumb Down** | 👎 Thumbs Down Bubble | 1 Hand |
+| **Double Thumb Down** | 🌧️ Dark Rainstorm | 2 Hands |
+| **Single Peace Sign** | 🎈 Floating Balloons | 1 Hand |
+| **Double Peace Sign** | 🎉 Confetti Shower | 2 Hands |
+| **Two Hands Forming a Heart** | ❤️ Floating Hearts | 2 Hands |
+| **Double "Rock On" Sign** | 🪩 Laser Beam Show | 2 Hands |
+
+---
+
 ## 🏗️ Architecture & Flow Scheme
 
 ```mermaid
@@ -130,7 +147,7 @@ pip install -r requirements.txt
 python Emojis.py
 ```
 
-### Notes
+### 📝 Notes
 - The project uses the Apple Color Emoji font on macOS for emoji rendering, which improves the visual quality of effect overlays.
 - If the camera does not open, verify that your webcam is available and that your system allows camera access.
 
@@ -143,14 +160,10 @@ python Emojis.py
 - A live window titled "Live" will open.
 - Your webcam feed will appear with the detected hands and animated effects.
 
-### Interaction
-- Show one or two hands in front of the camera.
-- Try the following gestures to trigger effects:
-  - ❤️ Heart gesture: triggers hearts
-  - 🤘 Rock-on: triggers lasers
-  - ✌️ Peace sign: triggers confetti or balloons
-  - 👍 Thumbs up: triggers fireworks or thumbs-up text
-  - 👎 Thumbs down: triggers a rainstorm or thumbs-down text
+### 🚀 Interaction
+- Show one or two hands clearly in front of the camera.
+- Try performing any of the gestures listed in the matrix above to trigger their corresponding visual effects!
+
 
 ### Exit
 - Press the space bar to close the application.
